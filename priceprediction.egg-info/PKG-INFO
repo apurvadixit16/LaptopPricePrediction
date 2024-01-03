@@ -1,8 +1,0 @@
-Metadata-Version: 2.1
-Name: priceprediction
-Version: 0.0.1
-Author: Apurva
-Author-email: apurvad1603@outlook.com
-Requires-Dist: pandas
-Requires-Dist: numpy
-Requires-Dist: seaborn
