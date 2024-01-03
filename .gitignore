@@ -127,6 +127,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+py38_pricePredictor/
 
 # Spyder project settings
 .spyderproject
