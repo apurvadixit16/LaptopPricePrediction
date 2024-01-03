@@ -1,0 +1,7 @@
+README.md
+setup.py
+priceprediction.egg-info/PKG-INFO
+priceprediction.egg-info/SOURCES.txt
+priceprediction.egg-info/dependency_links.txt
+priceprediction.egg-info/requires.txt
+priceprediction.egg-info/top_level.txt
