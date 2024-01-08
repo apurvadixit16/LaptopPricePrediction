@@ -29,21 +29,22 @@ class PredictPipeline:
 class CustomData:
     def __init__(  self,
         company : str,
-        type : str,
+        laptop_type : str,
         ram :int,
-        weight : str,
-        touchscreen : str,
-        ips : str,
+        weight : int,
+        touchscreen : int,
+        ips : int,
         screen_size : int,
         resolution :int,
         cpu ,
         hdd ,
         ssd ,
         gpu ,
-        os):
+        os,
+        ppi):
 
         self.company = company
-        self.type = type
+        self.laptop_type = laptop_type
         self.ram = ram
         self.weight = weight
         self.touchscreen = touchscreen
@@ -56,26 +57,27 @@ class CustomData:
         self.ssd = ssd
         self.gpu = gpu
         self.os = os
+        self.ppi = ppi
 
     def get_data_as_data_frame(self):
         try:
             custom_data_input_dict = {
-                "company": [self.company],
-                "type": [self.type],
-                "weight": [self.weight],
+                "Company": [self.company],
+                "TypeName": [self.laptop_type],
+                "Ram": [self.ram],
+                "Weight": [self.weight],
                 "touchscreen": [self.touchscreen],
                 "ips": [self.ips],
-                "ips": [self.ips],
+                "ppi": [self.ppi],
                 "screen_size": [self.screen_size],
                 "resolution": [self.resolution],
-                "cpu": [self.cpu],
-                "hdd": [self.hdd],
-                "ssd": [self.ssd],
-                "ssd": [self.ssd],
-                "gpu": [self.gpu],
+                "Cpu brand": [self.cpu],
+                "HDD": [self.hdd],
+                "SSD": [self.ssd],
+                "Gpu brand": [self.gpu],
                 "os": [self.os]
             }
-
+            print(pd.DataFrame(custom_data_input_dict))
             return pd.DataFrame(custom_data_input_dict)
 
         except Exception as e:
